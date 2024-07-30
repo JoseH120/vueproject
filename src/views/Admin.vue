@@ -154,7 +154,7 @@ export default {
         });
     },
     get() {
-      console.log("test");
+      // console.log("test");
       this.$api
         .get("/blog")
         .then((res) => {
@@ -176,7 +176,7 @@ export default {
         var image = res.data.post_featured_image;
         if (image !== "") {
           this.image =
-            "http://localhost/restapi2/public/assets/uploads/" + image;
+            "http://localhost/restapicetec/public/assets/uploads/" + image;
         } else {
           this.image = "";
 

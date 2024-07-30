@@ -4,7 +4,7 @@
       <img
         v-if="post.post_featured_image != ''"
         :src="
-          'http://localhost/restapi2/public/assets/uploads/' +
+          'http://localhost/restapicetec/public/assets/uploads/' +
           post.post_featured_image
         "
         alt=""

@@ -1,9 +1,11 @@
 import store from "@/store/store";
 import axios from "axios";
 
+const repository = import.meta.env.VITE_APP_REPOSITORY;
+
 const guest = axios.create({
   // withCredentials: true,
-  baseURL: "http://localhost/restapi2/public/user",
+  baseURL: `http://localhost/${repository}/public/user`,
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
     "X-Requested-With": "XMLHttpRequest",
@@ -12,7 +14,7 @@ const guest = axios.create({
 
 const api = axios.create({
   // withCredentials: true,
-  baseURL: "http://localhost/restapi2/public/",
+  baseURL: `http://localhost/${repository}/public/`,
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
     "X-Requested-With": "XMLHttpRequest",
